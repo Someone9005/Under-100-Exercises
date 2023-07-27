@@ -1,0 +1,4 @@
+site = input("Enter URL to read to Python:") # Different task I actually have authorisations for
+resp = requests.get(site)
+print("") # New line, aesthetic reasons
+print(resp.text)
