@@ -1,0 +1,33 @@
+def password_checker():
+    
+    alphabet_upper = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
+    numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
+    
+    password = input("Please create a password of over five characters, containing at least one number and at least one upppercase letter:")
+    
+    if alphabet_upper.intersection(set(password)) and numbers.intersection(set(password)) and len(password) >= 5:
+        
+        print("")
+        print("Password is fine")
+    
+    else:
+        
+        print("")
+        print("Please check the following:")
+        
+        if not alphabet_upper.intersection(set(password)):
+            print("")
+            print("Password must contain at least one capital")
+        
+        if not numbers.intersection(set(password)):
+            print("")
+            print("Password must contain at least one number")
+            
+        if len(password) < 5:
+            print("")
+            print("Password must be at least five characters")
+        
+        print("")
+        password_checker()
+        
+password_checker()
