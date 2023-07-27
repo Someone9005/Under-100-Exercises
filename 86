@@ -1,0 +1,4 @@
+checklist = ["Portugal", "Germany", "Munster", "Spain"]
+
+checklist = [i for i in checklist if i in filist]
+print(checklist)
