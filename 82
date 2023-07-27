@@ -1,0 +1,8 @@
+!pip install ephem
+import ephem
+
+jupiter = ephem.Jupiter() # Renaming for simplicity
+jupiter.compute("1230/1/1") # Makes Python deduce where Jupiter actually is at this date
+dist_au = jupiter.sun_distance # Distance in AU
+dist_km = dist_au * 149597870.691 # Converts to km
+print(dist_km)
