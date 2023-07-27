@@ -1,0 +1,2 @@
+more_data = pandas.read_csv("https://pythonhow.com/media/data/sampledata_x_2.txt")
+print(pandas.concat([data, more_data])) # Note dataframes as list, not two inputs
