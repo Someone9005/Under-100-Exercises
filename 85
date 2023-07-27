@@ -1,0 +1,17 @@
+file = open("countries_raw.txt") # Opens upload
+filist = file.readlines() # Makes readable
+
+filist = [i.strip("\n") for i in filist if "\n" in i]
+# Above: seems to be the equivalent of:
+# for i in filist:
+#     if "\n" in i:
+#         i.strip("\n")
+# Why put in single line?.
+# Cos. just stripping isn't enough, need to save stripped version to filist
+
+filist = [i for i in filist if i != ""] # Only keeps non-empty elements
+filist = [i for i in filist if i != "Top of Page"] # Only keeps elements not saying "top of page"
+filist = [i for i in filist if len(i) > 1] # Only keeps long elements
+
+for i in filist:
+    print(i)
